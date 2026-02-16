@@ -1,0 +1,13 @@
+[Unit]
+Description=Hyprland autostart
+After=graphical.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hyprland
+Restart=always
+Environment=WAYLAND_DISPLAY=wayland-0
+Environment=XDG_RUNTIME_DIR=%t/runtime-dir
+
+[Install]
+WantedBy=default.target
